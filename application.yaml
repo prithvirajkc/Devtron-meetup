@@ -4,12 +4,12 @@ metadata:
   name: my-argocd-project
   namespace: argocd
 spec:
-  project: argocd-proj
+  project: default
 
   source:
     repoURL: https://github.com/prithvirajkc/Devtron-meetup.git
     targetRevision: HEAD
-
+    path: yaml_files
   destination: 
     server: https://kubernetes.default.svc
     namespace: devtron

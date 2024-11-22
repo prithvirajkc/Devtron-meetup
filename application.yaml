@@ -7,17 +7,17 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/prithvirajkc/Devtron-meetup.git
+    repoURL: https://github.com/prithvirajkc/Devtron-meetup.git # URL of the Git repo
     targetRevision: HEAD
-    path: yaml_files
+    path: yaml_files # Directory inside the repo
   destination: 
-    server: https://kubernetes.default.svc
+    server: https://kubernetes.default.svc # Target cluster (Service name in default ns)
     namespace: devtron
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+    - CreateNamespace=true #Creates if namespace is not present
 
     automated:
-      selfHeal: true
-      prune: true
+      selfHeal: true 
+      prune: false

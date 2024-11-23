@@ -19,5 +19,5 @@ spec:
     - CreateNamespace=true #Creates if namespace is not present
 
     automated:
-      selfHeal: true 
-      prune: false
+      selfHeal: true # Specifies if partial app sync should be executed when resources are changed only in target Kubernetes cluster and no git change detected ( false by default ).
+      prune: false #Specifies if resources should be pruned during auto-syncing ( false by default ).
